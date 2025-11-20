@@ -1,8 +1,8 @@
 package org.tp.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
 @Entity
@@ -11,6 +11,7 @@ public class CompteBancaire {
     private Long numCompte;
     private Long solde;
     private Date creationDate;
+    private boolean estEpargne;
     public CompteBancaire() {
     }
     public Long getNumCompte() {
@@ -30,5 +31,11 @@ public class CompteBancaire {
     }
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+    public boolean isEstEpargne() {
+        return estEpargne;
+    }
+    public void setEstEpargne(boolean estEpargne) {
+        this.estEpargne = estEpargne;
     }
 }
